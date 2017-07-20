@@ -2,7 +2,7 @@
 * @Author: lenovo
 * @Date:   2017-07-15 17:54:09
 * @Last Modified by:   lenovo
-* @Last Modified time: 2017-07-15 22:19:06
+* @Last Modified time: 2017-07-19 19:30:21
 */
 /* 通用头部导航 */
 .header .logo{
@@ -33,4 +33,15 @@
 	position: absolute;
 	height: 44px;
 	width: 80px;
+}
+
+/* 面包屑导航 */
+.crumb{
+	height: 50px;
+	line-height: 50px;
+	background: #eee;
+	color: #888;
+	font-size: 14px;
+	margin-bottom: 10px;
+	border-top: 2px solid #c60023;
 }

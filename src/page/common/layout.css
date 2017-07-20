@@ -2,7 +2,7 @@
 * @Author: lenovo
 * @Date:   2017-07-14 19:38:41
 * @Last Modified by:   lenovo
-* @Last Modified time: 2017-07-15 15:50:35
+* @Last Modified time: 2017-07-19 19:45:00
 */
 /* css reset*/
 *{
@@ -35,7 +35,22 @@ input[type='checkbox']{
 	overflow: hidden;
 }
 
-
+/* panel */
+.panel{
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #fff;
+}
+.panel-title{
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+	padding: 10px;
+	overflow: hidden;
+}
 /* 全局通用样式  */
 /* 隐藏类 */
 .hide{
