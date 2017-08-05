@@ -2,7 +2,7 @@
 * @Author: lenovo
 * @Date:   2017-07-11 21:20:30
 * @Last Modified by:   lenovo
-* @Last Modified time: 2017-07-19 23:59:52
+* @Last Modified time: 2017-08-04 20:10:47
 */
 var webpack           = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -10,7 +10,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 //环境变量的配置，dev/ online
 var WEBPACK_ENV       = process.env.WEBPACK_ENV || 'dev';
 
-//获取html-webpack-plugin参数的方
+//获取html-webpack-plugin参数的方法
 var getHtmlConfig = function(name,title ){
 	return{
 		    template : './src/view/'+ name + '.html',
@@ -25,13 +25,16 @@ var getHtmlConfig = function(name,title ){
 var config  = {
     entry: {
     	'common'                   : ['./src/page/common/index.js'],
-    	'index'                    : ['./src/page/index/index.js'],
-        'user-login'             : ['./src/page/user-login/index.js'],
-        'user-register'          : ['./src/page/user-register/index.js'],
-        'user-pass-reset'        : ['./src/page/user-pass-reset/index.js'],
-        'user-center'            : ['./src/page/user-center/index.js'],
-        'user-center-update'     : ['./src/page/user-center-update/index.js'],
-        'user-pass-update'       : ['./src/page/user-pass-update/index.js'],
+        'index'                    : ['./src/page/index/index.js'],
+        'list'                     : ['./src/page/list/index.js'],
+        'detail'                   : ['./src/page/detail/index.js'],
+        'cart'                     : ['./src/page/cart/index.js'],
+        'user-login'               : ['./src/page/user-login/index.js'], 
+        'user-register'            : ['./src/page/user-register/index.js'],
+        'user-pass-reset'          : ['./src/page/user-pass-reset/index.js'],
+        'user-center'              : ['./src/page/user-center/index.js'],
+        'user-center-update'       : ['./src/page/user-center-update/index.js'],
+        'user-pass-update'         : ['./src/page/user-pass-update/index.js'],
     	'result'                   : ['./src/page/result/index.js']
     }, 
     output: { 
@@ -65,7 +68,10 @@ var config  = {
     	 //把css单独打包到文件里
     	 new ExtractTextPlugin("css/[name].css"), 
     	 //html模板的处理
-    	 new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+         new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+         new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
+         new HtmlWebpackPlugin(getHtmlConfig('cart','购物车')),
          new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
          new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
          new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),

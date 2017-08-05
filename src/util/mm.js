@@ -2,7 +2,7 @@
 * @Author: lenovo
 * @Date:   2017-07-14 11:33:48
 * @Last Modified by:   lenovo
-* @Last Modified time: 2017-07-19 23:47:25
+* @Last Modified time: 2017-08-03 10:03:37
 */
 'use strict';
 var Hogan = require('hogan.js');
@@ -40,6 +40,8 @@ var _mm = {
     // 获取服务器地址
     getServerUrl : function(path){
         return conf.serverHost + path;
+
+        
     },
     // 获取url参数
     getUrlParam : function(name){

@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-17 18:55:04
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-06-02 17:51:15
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-08-05 10:08:43
 */
 
 'use strict';
@@ -83,7 +83,7 @@ var _cart = {
         });
     },
     // 删除指定商品
-    deleteProduct : function(productIds, resolve, reject){
+   deleteProduct : function(productIds, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/delete_product.do'),
             data    : {
@@ -92,6 +92,6 @@ var _cart = {
             success : resolve,
             error   : reject
         });
-    },
+    }
 }
 module.exports = _cart;

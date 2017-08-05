@@ -2,7 +2,7 @@
 * @Author: lenovo
 * @Date:   2017-07-15 17:53:35
 * @Last Modified by:   lenovo
-* @Last Modified time: 2017-07-15 22:21:06
+* @Last Modified time: 2017-07-21 15:27:45
 */
 
 'use strict';
@@ -12,6 +12,7 @@ var _mm     = require('util/mm.js');
 // 通用页面头部
 var header = {
     init : function(){
+        this.onLoad();
         this.bindEvent();
     },
     onLoad : function(){
